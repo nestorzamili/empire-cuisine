@@ -50,15 +50,23 @@ IDs are the long string in the URL:
 
 ### A. Create or link an Apps Script project
 
-```bash
-# once: login
-clasp login
+Once per machine:
 
-# option 1 — create a new standalone project (writes .clasp.json with scriptId)
+```bash
+npm install -g @google/clasp
+clasp login
+```
+
+Also enable the [Google Apps Script API](https://script.google.com/home/usersettings) (toggle **Google Apps Script API** on).
+
+Then either create a new project or link an existing one:
+
+```bash
+# option 1 — new standalone project (writes .clasp.json with scriptId)
 clasp create --type standalone --title "Empire Cuisine Booking Sync" --rootDir src
 
-# option 2 — use an existing project: copy example and paste scriptId from
-#   https://script.google.com → project → Project Settings → Script ID
+# option 2 — existing project: copy example, set scriptId from
+#   script.google.com → project → Project Settings → Script ID
 cp .clasp.json.example .clasp.json
 # edit .clasp.json → set "scriptId"
 ```
