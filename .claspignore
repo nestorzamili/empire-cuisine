@@ -1,0 +1,9 @@
+samples/**
+.git/**
+**/*.xlsx
+**/*.md
+.gitignore
+.claspignore
+.clasp.json
+.clasp.json.example
+README.md
